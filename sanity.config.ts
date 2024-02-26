@@ -1,5 +1,5 @@
 // sanity.config.ts
-import { renderStudio, defineConfig } from "sanity";
+import { defineConfig } from "sanity";
 import { structureTool } from 'sanity/structure'
 
 const config = {
@@ -12,13 +12,13 @@ const config = {
       types: [
         /* your content types here*/
       {
-          title: "My Example Document Type",
-          name: "exampleDocumentType",
+          title: "Games",
+          name: "games",
           type: "document",
           fields: [
               {
-              title: "Greeting",
-              name: "greeting",
+              title: "Name",
+              name: "name",
               type: "string"
               }
           ]
