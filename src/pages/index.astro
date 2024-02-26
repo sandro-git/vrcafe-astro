@@ -7,6 +7,11 @@ import LandingImage from "../components/LandingImage.astro";
 import PricingSection from "../components/PricingSection.astro";
 import Games from "../components/Games.astro";
 import Title from "../components/Title.astro";
+
+import { sanityClient } from "sanity:client";
+
+const posts = await sanityClient.fetch(`*[_type == "post" && defined(slug)] | order(publishedAt desc)`);
+
 ---
 
 <Layout title="Welcome to Astro.">
